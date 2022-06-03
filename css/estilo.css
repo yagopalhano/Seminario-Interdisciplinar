@@ -6,7 +6,7 @@
 body {
     height: 100vh;
     font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
-    background: rgba(168, 163, 163, 0.993);
+    background: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +29,7 @@ body {
     align-items: center;
     width: 70%;
     margin: auto;
-    background-color: rgb(107, 144, 192);
+    background-color: rgb(2, 48, 109);
     text-align: center;
     border-radius: 20px 0px 0px 20px;
     color: white;
@@ -49,7 +49,7 @@ img {
     width: 30%;
     padding: 20px;
     text-align: center;
-    background-color: white;
+    background-color: rgb(146, 142, 142);
     border-radius: 0px 20px 20px 0px;
     color: rgb(107, 144, 192);
 }

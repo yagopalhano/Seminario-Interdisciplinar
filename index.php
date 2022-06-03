@@ -19,7 +19,6 @@
     <div id="principal">
         <div class="recepcao">
             <h2>SEJA BEM-VINDO</h2>
-            <P>UTILIZE NOSSOS SERVIÇOS PARA MELHORAR SUA ADMINISTRAÇÃO</P>
         </div>
 
     

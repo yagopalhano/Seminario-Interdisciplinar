@@ -1,0 +1,74 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    background: rgba(255, 255, 255, 0.993);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#principal {
+    height: 30em;
+    display: flex;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 20px;
+    min-width: 30%;
+}
+
+.recepcao {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    background-color: rgb(3, 48, 107);
+    text-align: center;
+    border-radius: 20px 0px 0px 20px;
+    color: white;
+}
+
+img {
+    width: 18em;
+    margin-top: 30px;
+    image-orientation: from-image;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(158, 158, 158);
+    border-radius: 0px 20px 20px 0px;
+    color: rgb(3, 48, 107);
+}
+
+.formulario {
+    text-align: left;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+label,
+input {
+    margin: 10px;
+}
+
+.botoes {
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}

@@ -1,4 +1,8 @@
 <?php
+    if(include 'dbConnection.php' == TRUE){
+        echo "Connected to MySQL<br />";
+    }
+
     session_start();
 
     $nome = isset($_SERVER["Nome"]) ? " - " + $_SESSION["Nome"] : "";

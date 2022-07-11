@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    $db = require("dbConnection.php");
+    $db = require("./dbConnection.php");
     $login = $_POST["email"];
     $baseUrl = $_SERVER["HTTP_HOST"];
     $password = sha1($_POST["password"]);

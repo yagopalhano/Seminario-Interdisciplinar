@@ -1,5 +1,5 @@
 <?php 
-    $db = require("dbConnection.php");
+    $db = require("./dbConnection.php");
    
     $baseUrl = $_SERVER["HTTP_HOST"];
     $id = $_POST["id"];  

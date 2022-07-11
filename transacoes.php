@@ -115,7 +115,7 @@ $transacoes = mysqli_fetch_all($db->query($query), 1);
                         <td>R$$transacao[Valor]</td>
                         <td>$transacao[Data]</td>
                         <td>$transacao[Tipo]</td>
-                        <td><input type='button' class='btn btn-danger' value='Excluir' onclick='teste($transacao[Id])'/></td>
+                        <td><input type='button' class='btn btn-danger' value='Excluir' onclick='$transacao[Id]'/></td>
                         </tr>
                         ";
             }

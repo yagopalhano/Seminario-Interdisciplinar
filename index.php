@@ -1,8 +1,4 @@
 <?php
-    mysqli_connect("lcpbq9az4jklobvq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-    "rtecz2xfd4vlc1fm", "qy271l5uzj2a78qv", "vk14drj3tmp2hdan") or die(mysqli_error());
-    echo "Connected to MySQL<br />";
-
     session_start();
 
     $nome = isset($_SERVER["Nome"]) ? " - " + $_SESSION["Nome"] : "";

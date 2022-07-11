@@ -1,7 +1,9 @@
 <?php 
+    include 'db_connection.php';
+    
     $method = $_SERVER["REQUEST_METHOD"];
     $serverHost = $_SERVER["HTTP_HOST"];
-    $db = require_once("./db.php");
+    $db = OpenCon();
     $request_data = json_decode(file_get_contents("php://input"));
     $id = $request_data->Id;
 

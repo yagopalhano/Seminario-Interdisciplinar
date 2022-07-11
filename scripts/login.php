@@ -1,6 +1,8 @@
-<?php 
+<?php
+    include 'db_connection.php';
+
     session_start();
-    $db = require("./db.php");
+    $db = OpenCon();
     $login = $_POST["email"];
     $baseUrl = $_SERVER["HTTP_HOST"];
     $password = sha1($_POST["password"]);

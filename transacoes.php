@@ -44,9 +44,8 @@ $transacoes = mysqli_fetch_all($db->query($query), 1);
             fetch("./scripts/excluitransacao.php", myInit)
                 .then(res => {
                     if (res.status === 200) {
-                        window.location.reload();
-                        $message = "User updated Sussesfully!";
-                        echo '<meta http-equiv="refresh" content="0">';
+                        header("Location: https://seminario-interdisciplinar.herokuapp.com/transacoes.php");
+                        document.location = "https://seminario-interdisciplinar.herokuapp.com/transacoes.php"
                     }
                 })
                 .catch(rej => console.log(rej));

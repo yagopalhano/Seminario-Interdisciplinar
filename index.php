@@ -1,5 +1,5 @@
 <?php
-    if(include 'dbConnection.php' == TRUE){
+    if((include'dbConnection.php') == TRUE){
         echo "Connected to MySQL<br />";
     }
 

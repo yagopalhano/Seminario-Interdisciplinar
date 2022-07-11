@@ -1,5 +1,5 @@
 <?php
-    $db = require("db.php");
+    $db = require("./db.php");
     $nome = $_POST["nome"];
     $email = $_POST["email"];
     $senha = $_POST["senha"];

@@ -1,6 +1,6 @@
 <?php 
-    include 'db_connection.php';
-    
+    include './dbConnection.php';
+
     $method = $_SERVER["REQUEST_METHOD"];
     $serverHost = $_SERVER["HTTP_HOST"];
     $db = OpenCon();

@@ -43,9 +43,8 @@ $transacoes = mysqli_fetch_all($db->query($query), 1);
 
             fetch("./scripts/excluitransacao.php", myInit)
                 .then(res => {
-                    if (res.status === 200) {
-                        header("Location: https://seminario-interdisciplinar.herokuapp.com/transacoes.php");
-                        document.location = "https://seminario-interdisciplinar.herokuapp.com/transacoes.php"
+                    if (res.status === 200) {             
+                        document.location = "https://seminario-interdisciplinar.herokuapp.com/"                        
                     }
                 })
                 .catch(rej => console.log(rej));

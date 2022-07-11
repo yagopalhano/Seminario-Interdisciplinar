@@ -1,7 +1,7 @@
 <?php
-    include "../dbConnection.php";
+    // include "../dbConnection.php";
 
-    $db = OpenCon();
+    $db = require "../dbConnection.php";
     $nome = $_POST["nome"];
     $email = $_POST["email"];
     $senha = $_POST["senha"];

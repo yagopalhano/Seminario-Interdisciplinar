@@ -44,7 +44,7 @@ $transacoes = mysqli_fetch_all($db->query($query), 1);
             fetch("./scripts/excluitransacao.php", myInit)
                 .then(res => {
                     if (res.status === 200) {
-                        document.location = "https://seminario-interdisciplinar.herokuapp.com/"
+                        document.location = "https://seminario-interdisciplinar.herokuapp.com/transacoes.php"
                     }
                 })
                 .catch(rej => console.log(rej));
@@ -115,7 +115,7 @@ $transacoes = mysqli_fetch_all($db->query($query), 1);
                         <td>R$$transacao[Valor]</td>
                         <td>$transacao[Data]</td>
                         <td>$transacao[Tipo]</td>
-                        <td><input type='button' class='btn btn-danger' value='Excluir' onclick='($transacao[Id])'/></td>
+                        <td><input type='button' class='btn btn-danger' value='Excluir' onclick='$transacao[Id]'/></td>
                         </tr>
                         ";
             }

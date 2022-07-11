@@ -1,5 +1,5 @@
 <?php
-    $db = require("./dbConnection.php");
+    $db = require("../dbConnection.php");
     $nome = $_POST["nome"];
     $email = $_POST["email"];
     $senha = $_POST["senha"];
@@ -9,7 +9,8 @@
 
     $query = "Insert into Usuarios(Nome, Email, Senha) Values('$nome', '$email', '$senhaCriptografada');";
     
-    if($db->query($query) {
+    if($db->query($query)) {
+        echo("http://$baseUrl/index.php?s=1");
         header("Location: http://$baseUrl/index.php?s=1");
         echo "Registro Realizado com sucesso";
     }else {

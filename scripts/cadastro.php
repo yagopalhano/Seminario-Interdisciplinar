@@ -1,5 +1,5 @@
 <?php
-    include '*.\dbConnection.php';
+    include '.\dbConnection.php';
 
     $db = OpenCon();
     $nome = $_POST["nome"];

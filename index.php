@@ -1,4 +1,4 @@
-<?php
+<?php 
     session_start();
 
     $nome = isset($_SERVER["Nome"]) ? " - " + $_SESSION["Nome"] : "";

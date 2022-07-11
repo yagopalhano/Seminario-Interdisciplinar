@@ -9,7 +9,7 @@
 
     $query = "Insert into Usuarios(Nome, Email, Senha) Values('$nome', '$email', '$senhaCriptografada');";
     
-    if(mysqli_query($db, $query)) {
+    if($db->query($query) {
         header("Location: http://$baseUrl/index.php?s=1");
         echo "Registro Realizado com sucesso";
     }else {

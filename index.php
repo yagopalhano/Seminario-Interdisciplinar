@@ -2,6 +2,12 @@
     session_start();
 
     $nome = isset($_SERVER["Nome"]) ? " - " + $_SESSION["Nome"] : "";
+
+    $db = require("./scripts/dbConnection.php");
+
+    $db->query(require("./queries/tabelaTipoTransacao.sql"));
+    $db->query(require("./queries/tabelaTransacoes.sql"));
+    $db->query(require("./queries/tabelaUsuarios.sql"));
 ?>
 
 <!DOCTYPE html>

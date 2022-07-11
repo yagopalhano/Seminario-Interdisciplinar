@@ -1,7 +1,5 @@
 <?php
-    // include "../dbConnection.php";
-
-    $db = require "../dbConnection.php";
+    $db = require("dbConnection.php");
     $nome = $_POST["nome"];
     $email = $_POST["email"];
     $senha = $_POST["senha"];

@@ -1,7 +1,5 @@
 <?php 
-    include './dbConnection.php';
-
-    $db = OpenCon();
+    $db = require("dbConnection.php");
    
     $baseUrl = $_SERVER["HTTP_HOST"];
     $id = $_POST["id"];  

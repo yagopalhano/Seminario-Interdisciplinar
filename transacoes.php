@@ -44,7 +44,9 @@ $transacoes = mysqli_fetch_all($db->query($query), 1);
             fetch("./scripts/excluitransacao.php", myInit)
                 .then(res => {
                     if (res.status === 200) {
-                        header("Refresh:0");
+                        window.location.reload();
+                        $message = "User updated Sussesfully!";
+                        echo '<meta http-equiv="refresh" content="0">';
                     }
                 })
                 .catch(rej => console.log(rej));

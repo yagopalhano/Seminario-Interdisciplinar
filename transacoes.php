@@ -159,13 +159,13 @@ $transacoes = mysqli_fetch_all($db->query($query), 1);
             }
 
             echo "</tbody>";
-            $saldo = floatval($transacao['Entrada'] - $transacao['Saída']);
+            $saldo = floatval($transacao['Entradas'] - $transacao['Saidas']);
             echo
             "<tfooter>
                     <tr>
                     <td>Saldo:</td>
                     <td>R$ $saldo</td>
-                    <td>ID: $id</td>
+                    <td>ID: $transacao</td>
                     </tr>
                     </tfooter>
                     </p>

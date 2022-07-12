@@ -26,10 +26,10 @@
     }
 
     $response = $_SESSION["responseLogin"]
-    echo "<pre>";
-        $console = 'console.log(' . json_encode($response) . ');';
-        $console = sprintf('<script>%s</script>', $console);
-        echo $console;
-    echo "</pre>";
+
+    $console = 'console.log(' . json_encode($response) . ');';
+    $console = sprintf('<script>%s</script>', $console);
+    echo $console;
+
 
     $db->close();

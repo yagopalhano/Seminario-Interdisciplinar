@@ -19,8 +19,12 @@ $queryEntrada = "Select SUM(Valor) from Transacoes WHERE tipo_transacao = 1 AND 
 $querySaida = "Select SUM(Valor) from Transacoes WHERE tipo_transacao = 2 AND Id_Usuario = $id"
 
 $transacoes = mysqli_fetch_all($db->query($query), 1);
-$entrada = mysqli_fetch_all($db->query($queryEntrada), 1);
-$saida = mysqli_fetch_all($db->query($querySaida), 1);
+$entrada = mysqli($db->query($queryEntrada));
+$saida = if(!mysqli($db->query($querySaida)){
+    $saida = 0
+}else{
+    $saida = mysqli($db->query($querySaida))
+};
 
 
 ?>

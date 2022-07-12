@@ -165,7 +165,7 @@ $transacoes = mysqli_fetch_all($db->query($query), 1);
                     <tr>
                     <td>Saldo:</td>
                     <td>R$ $saldo</td>
-                    <td>ID: $transacao</td>
+                    <td>ID: $id</td>
                     </tr>
                     </tfooter>
                     </p>

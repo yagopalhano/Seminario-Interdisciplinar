@@ -1,7 +1,7 @@
 # Seminário Interdisciplinar: Implementação de uma Aplicação WEB
 
 ## Link da Aplicação
-    [http://seminario-interdisciplinar.herokuapp.com/]http://seminario-interdisciplinar.herokuapp.com/)
+http://seminario-interdisciplinar.herokuapp.com/
 
 ## Tecnologias
   - PHP

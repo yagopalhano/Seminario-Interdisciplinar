@@ -4,7 +4,7 @@ $nome = $_SESSION["Nome"];
 $id = $_SESSION["Id"];
 $db = require_once("./scripts/dbConnection.php");
 $serverHost = $_SERVER["HTTP_HOST"];
-$query = "SELECT (Select SUM(Valor) from Transacoes WHERE Tipo_Transacao = 1) as Entradas, (Select SUM(Valor) from Transacoes WHERE Tipo_Transacao = 2) as Saidas, 
+$query = "SELECT (Select SUM(Valor) from Transacoes WHERE Tipo_Transacao = 1 AND Id_Usuario = $id) as Entradas, (Select SUM(Valor) from Transacoes WHERE Tipo_Transacao = 2 AND Id_Usuario = $id) as Saidas, 
 t.Id,
 t.Descricao,
 t.Data,
@@ -15,16 +15,7 @@ Transacoes t
 LEFT JOIN Tipo_Transacao tt on(tt.Id = t.Tipo_Transacao)
 WHERE Id_Usuario = $id
 AND Exibe = 1;";
-$queryEntrada = "Select SUM(Valor) from Transacoes WHERE tipo_transacao = 1 AND Id_Usuario = $id"
-$querySaida = "Select SUM(Valor) from Transacoes WHERE tipo_transacao = 2 AND Id_Usuario = $id"
-
 $transacoes = mysqli_fetch_all($db->query($query), 1);
-$entrada = mysqli($db->query($queryEntrada));
-if(mysqli($db->query($querySaida) == NULL){
-    $saida = 0
-}else{
-    $saida = mysqli($db->query($querySaida))
-};
 
 
 ?>
@@ -132,16 +123,12 @@ if(mysqli($db->query($querySaida) == NULL){
         </p>";
         } else {
             echo "
-
             <div class='card' style='width: 100%;'>
         <div class='card-body'>
             <h5 class='card-title'>Resumo de transações </h5>
             <h6 class='card-subtitle mb-2 text-muted'>Card subtitle</h6>
             <p class='card-text'>
-
             
-
-
         <table class='table  table-striped'>
             <thead>
                 <tr>
@@ -168,7 +155,7 @@ if(mysqli($db->query($querySaida) == NULL){
             }
 
             echo "</tbody>";
-            $saldo = floatval($entrada['valor'] - $saida['valor']);
+            $saldo = floatval($transacao['Entradas'] - $transacao['Saidas']);
             echo
             "<tfooter>
                     <tr>

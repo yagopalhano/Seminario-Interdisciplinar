@@ -12,8 +12,6 @@
     if($result) {
         $response = mysqli_fetch_assoc($result);
         echo "<pre>";
-
-        write_to_console($response);
         $console = 'console.log(' . json_encode($response) . ');';
         $console = sprintf('<script>%s</script>', $console);
         echo $console;

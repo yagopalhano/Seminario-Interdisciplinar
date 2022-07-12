@@ -2,6 +2,13 @@
 session_start();
 
 $nome = isset($_SERVER["Nome"]) ? " - " + $_SESSION["Nome"] : "";
+
+function write_to_console($data) {
+
+    $console = 'console.log(' . json_encode($data) . ');';
+    $console = sprintf('<script>%s</script>', $console);
+    echo $console;
+   }
 ?>
 
 <!DOCTYPE html>

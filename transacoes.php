@@ -17,7 +17,7 @@ WHERE Id_Usuario = $id
 AND Exibe = 1;";
 $transacoes = mysqli_fetch_all($db->query($query), 1);
 
-console.log($_SESSION["responseLogin"];)
+
 ?>
 
 <!DOCTYPE html>

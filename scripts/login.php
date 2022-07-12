@@ -1,9 +1,9 @@
 <?php 
     session_start();
     $db = require("./dbConnection.php");
-    $login = $_POST["email"];
     $baseUrl = $_SERVER["HTTP_HOST"];
     $password = sha1($_POST["password"]);
+    $login = $_POST["email"];
 
     $query = "SELECT Id, Nome FROM Usuarios WHERE Email = '$login' AND Senha = '$password';";
 
@@ -12,9 +12,8 @@
     if($result) {
         $response = mysqli_fetch_assoc($result);
         echo "<pre>";
-        print_r($response);
+        write_to_console($response);
         echo "</pre>";
-        $_SESSION["responseLogin"] = $response;
         $_SESSION["Nome"] = $response["Nome"];
         $_SESSION["Id"] = $response["Id"];
         $_SESSION["logged"] = true;

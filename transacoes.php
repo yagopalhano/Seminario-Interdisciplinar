@@ -20,7 +20,7 @@ $querySaida = "Select SUM(Valor) from Transacoes WHERE tipo_transacao = 2 AND Id
 
 $transacoes = mysqli_fetch_all($db->query($query), 1);
 $entrada = mysqli($db->query($queryEntrada));
-$saida = if(!mysqli($db->query($querySaida)){
+if(mysqli($db->query($querySaida) == NULL){
     $saida = 0
 }else{
     $saida = mysqli($db->query($querySaida))

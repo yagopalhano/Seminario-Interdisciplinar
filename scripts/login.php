@@ -12,10 +12,9 @@
     if($result) {
         $response = mysqli_fetch_assoc($result);
         echo "<pre>";
-        $console = 'console.log(' . json_encode($response) . ');';
-        $console = sprintf('<script>%s</script>', $console);
-        echo $console;
+        print_r($response);
         echo "</pre>";
+        $_SESSION["responseLogin"] = $response;
         $_SESSION["Nome"] = $response["Nome"];
         $_SESSION["Id"] = $response["Id"];
         $_SESSION["logged"] = true;
@@ -25,5 +24,12 @@
         $_SESSION["logged"] = false;
         header("Location: http://$baseUrl/index.php?login=1");
     }
+
+    $response = $_SESSION["responseLogin"]
+    echo "<pre>";
+        $console = 'console.log(' . json_encode($response) . ');';
+        $console = sprintf('<script>%s</script>', $console);
+        echo $console;
+    echo "</pre>";
 
     $db->close();

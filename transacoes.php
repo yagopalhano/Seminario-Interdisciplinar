@@ -15,7 +15,7 @@ Transacoes t
 LEFT JOIN Tipo_Transacao tt on(tt.Id = t.Tipo_Transacao)
 WHERE Id_Usuario = $id
 AND Exibe = 1;";
-$transacoes = mysqli_fetch_all($db->query($query));
+$transacoes = mysqli_fetch_all($db->query($query), 1);
 
 
 ?>
@@ -159,7 +159,7 @@ $transacoes = mysqli_fetch_all($db->query($query));
             }
 
             echo "</tbody>";
-            $saldo = floatval($transacao['Entradas'] - $transacao['Saidas']);
+            $saldo = floatval($transacao['Entrada'] - $transacao['Saída']);
             echo
             "<tfooter>
                     <tr>

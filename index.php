@@ -21,6 +21,7 @@ $nome = isset($_SERVER["Nome"]) ? " - " + $_SESSION["Nome"] : "";
 <body>
 
     <h1 class="h3 mb-3 fw-normal position-absolute top-0 start-50 translate-middle-x">Sistema Financeiro</h1>
+    <form class="formulario" method="POST" action="./scripts/login.php">
     <div class="card position-absolute top-50 start-50 translate-middle" style="width: 500px;">
         <img src="img/fundo_login.jpg" class="card-img-top" alt="...">
         <div class="card-body">
@@ -37,6 +38,7 @@ $nome = isset($_SERVER["Nome"]) ? " - " + $_SESSION["Nome"] : "";
             <p class="text-center">Não tem cadastro? <a  href="cadastrar.html">Clique aqui.</a></p>
         </div>
     </div>
+    </form>
 
     <!-- <div id="principal">
         <div class="recepcao">

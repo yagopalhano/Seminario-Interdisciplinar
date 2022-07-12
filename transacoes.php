@@ -53,14 +53,37 @@ $transacoes = mysqli_fetch_all($db->query($query), 1);
     </script>
 </head>
 
+
+
 <body>
+<nav class="navbar navbar-expand-lg navbar-dark  bg-dark" aria-label="Eighth navbar example">
+    <div class="container">
+      <a class="navbar-brand" href="#">Sistema Financeiro</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+        <div class="navbar-nav ml-auto">
+			<div class="nav-item dropdown show">
+				<a href="#" data-toggle="dropdown" class="nav-link  user-action" aria-expanded="true"><img src="./img/user.png" class="text-light" height="30px" alt="Avatar"> <?php echo $nome ?></a>				
+			</div>
+		</div>
+        
+        
+      </div>
+    </div>
+  </nav>
     <div class="container">
 
         <header>
-            <h1 class="text-center">Bem vindo(a)! <?php echo $nome ?></h1>
+            <h1 class="text-center">Fluxo de Caixa</h1>
         </header>
         <form method="POST" action="./scripts/novatransacao.php">
-            <p>Insira uma nova transação:<p>
+        <div class="card" style="width: 100%; margin-bottom:8px ;">
+        <div class="card-body">
+            <h5 class="card-title">Insira uma nova transação</h5>
+            <p class="card-text">
             <div class="row">
                 <div class="col">
                     <input class="form-control" required id="descricao" name="descricao" type="text" placeholder="Descrição da transação">
@@ -85,7 +108,13 @@ $transacoes = mysqli_fetch_all($db->query($query), 1);
                     </div>
                 <input type="number" value=<?php echo $id ?> name="id" id="id" hidden="TRUE" />
             </div>
+            </p>
+        </div>
+        </div>
         </form>
+
+        
+
         <?php
         if (!$transacoes) {
             echo "
@@ -94,7 +123,16 @@ $transacoes = mysqli_fetch_all($db->query($query), 1);
         </p>";
         } else {
             echo "
-        <p>Resumo de transações:<p>
+
+            <div class='card' style='width: 100%;'>
+        <div class='card-body'>
+            <h5 class='card-title'>Resumo de transações</h5>
+            <h6 class='card-subtitle mb-2 text-muted'>Card subtitle</h6>
+            <p class='card-text'>
+
+            
+
+
         <table class='table  table-striped'>
             <thead>
                 <tr>
@@ -128,7 +166,12 @@ $transacoes = mysqli_fetch_all($db->query($query), 1);
                     <td>Saldo:</td>
                     <td>R$ $saldo</td>
                     </tr>
-                    </tfooter>";
+                    </tfooter>
+                    </p>
+                </div>
+                </div>
+                    
+                    ";
         }
         ?>
 
@@ -137,6 +180,7 @@ $transacoes = mysqli_fetch_all($db->query($query), 1);
 
     </div>
     <script src="./libs/bootstrap/js/bootstrap.min.js"></script>
+    
 </body>
 
 </html>

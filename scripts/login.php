@@ -12,7 +12,11 @@
     if($result) {
         $response = mysqli_fetch_assoc($result);
         echo "<pre>";
+
         write_to_console($response);
+        $console = 'console.log(' . json_encode($response) . ');';
+        $console = sprintf('<script>%s</script>', $console);
+        echo $console;
         echo "</pre>";
         $_SESSION["Nome"] = $response["Nome"];
         $_SESSION["Id"] = $response["Id"];

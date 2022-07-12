@@ -15,7 +15,12 @@ Transacoes t
 LEFT JOIN Tipo_Transacao tt on(tt.Id = t.Tipo_Transacao)
 WHERE Id_Usuario = $id
 AND Exibe = 1;";
+$queryEntrada = "Select SUM(Valor) from Transacoes WHERE tipo_transacao = 1 AND Id_Usuario = $id"
+$querySaida = "Select SUM(Valor) from Transacoes WHERE tipo_transacao = 2 AND Id_Usuario = $id"
+
 $transacoes = mysqli_fetch_all($db->query($query), 1);
+$entrada = mysqli_fetch_all($db->query($queryEntrada), 1);
+$saida = mysqli_fetch_all($db->query($querySaida), 1);
 
 
 ?>
@@ -159,7 +164,7 @@ $transacoes = mysqli_fetch_all($db->query($query), 1);
             }
 
             echo "</tbody>";
-            $saldo = floatval($transacao['Entradas'] - $transacao['Saidas']);
+            $saldo = floatval($entrada['valor'] - $saida['valor']);
             echo
             "<tfooter>
                     <tr>

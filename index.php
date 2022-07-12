@@ -30,9 +30,9 @@ $nome = isset($_SERVER["Nome"]) ? " - " + $_SESSION["Nome"] : "";
         <div class="card-body">
             <div class="input-group mb-3">
                 <span class="input-group-text" id="user">@</span>
-                <input type="text" class="form-control" id="email" placeholder="E-mail" aria-label="Username" aria-describedby="user">
+                <input type="text" class="form-control" id="email" name="email" placeholder="E-mail" aria-label="Username" aria-describedby="user">
                 <span class="input-group-text" id="pass">*</span>
-                <input type="password" class="form-control" id="password" placeholder="Senha" aria-label="Username" aria-describedby="pass">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Senha" aria-label="Password" aria-describedby="pass">
             </div>
             <button class="w-100 btn btn-lg btn-primary" type="submit">Entrar</button>
             <p class="text-center">Não tem cadastro? <a  href="cadastrar.html">Clique aqui.</a></p>

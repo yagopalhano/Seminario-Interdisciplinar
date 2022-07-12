@@ -14,6 +14,7 @@
         echo "<pre>";
         print_r($response);
         echo "</pre>";
+        $_SESSION["responseLogin"] = $response;
         $_SESSION["Nome"] = $response["Nome"];
         $_SESSION["Id"] = $response["Id"];
         $_SESSION["logged"] = true;

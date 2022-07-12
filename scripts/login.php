@@ -25,11 +25,5 @@
         header("Location: http://$baseUrl/index.php?login=1");
     }
 
-    $response = $_SESSION["responseLogin"]
-
-    $console = 'console.log(' . json_encode($response) . ');';
-    $console = sprintf('<script>%s</script>', $console);
-    echo $console;
-
-
     $db->close();
+?>

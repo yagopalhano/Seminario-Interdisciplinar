@@ -1,7 +1,7 @@
 <?php
 session_start();
 $nome = $_SESSION["Nome"];
-$id = $_SESSION["Id"];
+$id = session_id();
 $db = require_once("./scripts/dbConnection.php");
 $serverHost = $_SERVER["HTTP_HOST"];
 $query = "SELECT (Select SUM(Valor) from Transacoes WHERE Tipo_Transacao = 1) as Entradas, (Select SUM(Valor) from Transacoes WHERE Tipo_Transacao = 2) as Saidas, 

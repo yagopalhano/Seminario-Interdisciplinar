@@ -12,7 +12,7 @@
     if($result) {
         $response = mysqli_fetch_assoc($result);
         echo "<pre>";
-        console.log($response);
+        echo "<script>console.log('Debug Objects: " . $result . "' );</script>";
         echo "</pre>";
         $_SESSION["Nome"] = $response["Nome"];
         $_SESSION["Id"] = $response["Id"];

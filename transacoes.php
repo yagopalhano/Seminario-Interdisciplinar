@@ -126,7 +126,7 @@ $transacoes = mysqli_fetch_all($db->query($query), 1);
 
             <div class='card' style='width: 100%;'>
         <div class='card-body'>
-            <h5 class='card-title'>Resumo de transações</h5>
+            <h5 class='card-title'>Resumo de transações </h5>
             <h6 class='card-subtitle mb-2 text-muted'>Card subtitle</h6>
             <p class='card-text'>
 
@@ -153,7 +153,7 @@ $transacoes = mysqli_fetch_all($db->query($query), 1);
                         <td>R$$transacao[Valor]</td>
                         <td>$transacao[Data]</td>
                         <td>$transacao[Tipo]</td>
-                        <td><input type='button' class='btn btn-danger' value='Excluir' onclick='$transacao[Id]'/></td>
+                        <td><input type='button' class='btn btn-danger' value='Excluir' onclick='teste($transacao[Id])'/></td>
                         </tr>
                         ";
             }
@@ -165,6 +165,7 @@ $transacoes = mysqli_fetch_all($db->query($query), 1);
                     <tr>
                     <td>Saldo:</td>
                     <td>R$ $saldo</td>
+                    <td>ID: $id</td>
                     </tr>
                     </tfooter>
                     </p>
